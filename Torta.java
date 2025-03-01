@@ -44,6 +44,6 @@ public class Torta extends Bolo {
             coberturaString = "sem cobertura";
         }
 
-        return "Torta " + recheioString + ", " + coberturaString + super.toString();
+        return super.toString() + " torta " + recheioString + ", " + coberturaString;
     }
 }

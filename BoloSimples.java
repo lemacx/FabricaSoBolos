@@ -5,7 +5,7 @@ public class BoloSimples extends Bolo {
 
     public BoloSimples (int codigo, double custo, IFormato formato){
         super(codigo, custo, formato);
-        semLactose = false;
+        semLactose = fal
     }
     public BoloSimples (int codigo, double custo, IFormato formato, boolean semLactose){
         super(codigo, custo, formato);
@@ -27,6 +27,6 @@ public class BoloSimples extends Bolo {
         } else {
             semLactoseString = "Com lactose";
         }
-        return super.toString() + "Sem lactose: " + semLactose;
+        return super.toString() + semLactoseString;
     }
 }

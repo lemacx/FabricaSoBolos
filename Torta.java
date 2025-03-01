@@ -1,4 +1,4 @@
-import Bolo;
+
 
 public class Torta extends Bolo {
     private boolean recheio;
@@ -11,12 +11,12 @@ public class Torta extends Bolo {
     }
 
     public Torta(int codigo, double custo, IFormato formato, boolean recheio, boolean cobertura) {
-        super(codigo, custo);
+        super(codigo, custo, formato); 
         this.recheio = recheio;
         this.cobertura = cobertura;
     }
 
-    public preco() {
+    public double preco() { 
         double preco = formato.area() + getCusto();
         if (recheio) {
             preco += 12.5;

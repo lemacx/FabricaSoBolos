@@ -8,20 +8,21 @@ public class VetorPrateleira implements IPrateleira{
         prateleira = new ArrayList<> (tamanho);
     }
 
-    public boolean existe(IBolo bolo) {
+    public boolean existe(IBolo bolo) {  
         for (IBolo item : this.prateleira) {
-            if (item.codigo() == bolo.codigo) {
+            if (item.getCodigo() == bolo.getCodigo()) {
                 return true;
             }
         }
         return false;
     }
-    public void inserir(IBolo bolo) {
+    public boolean inserir(IBolo bolo) { 
         if (this.existe(bolo)) {
             System.out.println("Bolo já cadastrado.");
-        } else {
-            prateleira.add(bolo);
-        }
+            return false;
+        } 
+        prateleira.add(bolo);
+        return true;
     }
 
     public IBolo remover(IBolo bolo) {
@@ -41,8 +42,8 @@ public class VetorPrateleira implements IPrateleira{
         return prateleira.remove(posicao);
     }
     
-    public List<IBolo> listar(char tipoDoBolo) {
-        List<IBolo> bolos;
+    public List<IBolo> listar(char tipoDoBolo) { 
+        List<IBolo> bolos; //
         for (IBolo item : this.prateleira) {
             if (item instanceof BoloSimples && tipoDoBolo == 'S') {
                 bolos.add(item);

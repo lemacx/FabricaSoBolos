@@ -27,6 +27,6 @@ public class BoloSimples extends Bolo {
         } else {
             semLactoseString = "Com lactose";
         }
-        return super.toString() + semLactoseString;
+        return super.toString() + " bolo simples " + semLactoseString;
     }
 }

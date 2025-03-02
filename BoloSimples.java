@@ -1,5 +1,3 @@
-import Bolo;
-
 public class BoloSimples extends Bolo {
     private boolean semLactose;
 
